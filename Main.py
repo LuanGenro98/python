@@ -1,21 +1,23 @@
 from model.User import User
 from service import UserService
 
+
 def convertTupleListToUsersList(tupleList):
     returnValue = []
     for tuple in tupleList:
-        returnValue.append(User(tuple[0],tuple[1],tuple[2],tuple[3]))
+        returnValue.append(User(tuple[0], tuple[1], tuple[2], tuple[3]))
     return returnValue
+
 
 # Create table if it doesn't exist one
 UserService.createTable()
 
 # Save new user
-user = User(0,'Luan','luangenro98@gmail.com','123')
+user = User(0, 'Luan', 'lu@.com', '123')
 UserService.save(user)
 
 # Load created user
-loadedTupleList = UserService.findById(14)
+loadedTupleList = UserService.findById(0)
 users = convertTupleListToUsersList(loadedTupleList)
 loadedUser = users[0]
 print(f"Loaded user's name: {loadedUser.name}")
