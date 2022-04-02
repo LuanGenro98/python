@@ -1,7 +1,7 @@
 # python-poo
 Assuntos estudados no projeto:
 
-* ParadigmaPOO
+* Paradigma POO
 * Operações CRUD
 ---
 * Query para iniciar os estudos:
